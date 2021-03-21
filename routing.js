@@ -14,6 +14,14 @@ app.get('/contact', (req, res) => {
     res.send('welcome to contact page')
 })
 
+app.get('/logout', (req, res) => {
+    res.send('logout page')
+})
+
+app.get('/portfolio', (req, res) => {
+    res.send('welcome to portfolio page')
+})
+
 app.get('*', (req, res) => {
     res.send('Page not found')
 })
