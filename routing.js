@@ -14,6 +14,10 @@ app.get('/contact', (req, res) => {
     res.send('welcome to contact page')
 })
 
+app.get('*', (req, res) => {
+    res.send('Page not found')
+})
+
 app.listen(3000, () => {
     console.log("server listing at port 8000");
 })
