@@ -22,6 +22,10 @@ app.get('/portfolio', (req, res) => {
     res.send('welcome to portfolio page')
 })
 
+app.get('/outteam', (req, res) => {
+    res.send('welcome to our team  page')
+})
+
 app.get('*', (req, res) => {
     res.send('Page not found')
 })
