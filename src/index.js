@@ -19,14 +19,28 @@ app.get('/', (req, res) => {
     })
 })
 
+
+
+app.get('/', (req, res) => {
+    res.send('hello from server')
+})
+
 app.get('/about', (req, res) => {
     res.render("about", {
         firstName: "Huzaifa"
     })
 })
 
-app.get('/', (req, res) => {
-    res.send('hello from server')
+app.get('/about/*', (req, res) => {
+    res.render("404", {
+        someText: "this about page not found"
+    })
+})
+
+app.get('*', (req, res) => {
+    res.render("404", {
+        someText: "Page not found"
+    })
 })
 
 app.listen(3000, () => {
