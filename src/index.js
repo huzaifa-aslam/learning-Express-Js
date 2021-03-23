@@ -16,6 +16,12 @@ app.get('/', (req, res) => {
     })
 })
 
+app.get('/about', (req, res) => {
+    res.render("about", {
+        firstName: "Huzaifa"
+    })
+})
+
 app.get('/', (req, res) => {
     res.send('hello from server')
 })
